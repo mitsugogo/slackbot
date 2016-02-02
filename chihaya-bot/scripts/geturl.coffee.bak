@@ -1,0 +1,24 @@
+request = require('request')
+cheerio = require('cheerio')
+URI     = require('URIjs')
+
+module.exports = (robot) ->
+  getTitle = (msg, uri) ->
+    request uri, (err, response, html) ->
+      if (err)
+        msg.send "Failed to fetch #{uri}..."
+        return
+      $ = cheerio.load(html)
+      if title = $('title').text().replace(/[\r\n]/g, " ")
+        msg.send "#{title} - #{uri}"
+      else
+        msg.send "Untitled - #{uri}"
+
+  robot.hear /https?:\/\//i, (msg) ->
+    body = msg.message.text
+    URI.withinString body, (uri) ->
+      robot.logger.debug "URL found: #{uri}"
+      if /\.(jpg|png|gif)$/.test uri
+        # Ignore image
+      else
+        getTitle(msg, uri)
