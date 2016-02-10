@@ -1,7 +1,7 @@
 module.exports = (robot) ->
 
   robot.hear /千早/i, (res) ->
-     res.reply "何？"
+     res.reply "何？でホルス"
 
   randomGreeting = ['えっ…いつも何を聞いているか、ですか？気になりますか？なら…聞いてみますか？…どうぞ'
                   , '歌を歌えるならば、肩書きはアイドルでも何でも構いません。厳しい指導をお願いします'

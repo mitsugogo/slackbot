@@ -9,4 +9,4 @@ module.exports = (robot) ->
      if /bot/.test res.envelope.user.name
          res.finish()
          
-     res.reply "いらっしゃい。gogoserver.slack.com よ。iOS、Android、Windows向けにネイティブアプリがあるらしいからダウンロードするといいらしいわ。\n" + "https://slack.com/downloads"
+     res.reply "gogoserver.slack.com へようこそ。iOS、Android、Mac向けにネイティブアプリがあるからダウンロードするといいらしいわ。\n" + "https://slack.com/downloads"
