@@ -1,7 +1,7 @@
 module.exports = (robot) ->
 
   robot.hear /^72$/i, (res) ->
-     res.send "くっ…でホルス"
+     res.send "くっ…"
 
   robot.hear /(やよい|うっうー)/i, (res) ->
      res.send "高槻さんかわいい…"
