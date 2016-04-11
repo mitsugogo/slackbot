@@ -83,5 +83,5 @@ result.select{|prog|
 }.sort_by{|prog|
   prog[:st_time] # 放送開始日時で降順に並べ替え
 }.each{|prog|
-  puts "#{format_time(prog[:st_time])} [#{prog[:ch_name]}] #{prog[:title]} / #{prog[:sub_title]}"
+  puts "#{format_time(prog[:st_time])} [#{prog[:ch_name]}] #{prog[:title]} \##{prog[:count]}「#{prog[:sub_title]}」"
 }
