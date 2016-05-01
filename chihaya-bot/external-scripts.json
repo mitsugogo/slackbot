@@ -11,5 +11,6 @@
   "hubot-shipit",
   "hubot-weather-ja",
   "hubot-plusplus",
-  "hubot-youtube"
+  "hubot-youtube",
+  "hubot-slack-vote"
 ]
